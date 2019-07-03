@@ -45,18 +45,18 @@ convertToString(21); // "21"
 
  // Function Decleration
  function addOne(n) {
-   return Number(n++);
+   return Number( n++ );
  }
  // Function Expression
  let addOne = function(n) {
-   return Number(n++);
+   return Number( n++ );
  }
  // Arrow function without curly braces.
- let addOne = n => Number(n++);
+ let addOne = n => Number( n++ );
 
 // Arrow function with curly braces.
 let addOne = (n) => {
-  return Number(n++);
+  return Number( n++ );
 }
 addOne(5); // 6
 
@@ -68,18 +68,18 @@ addOne(5); // 6
 
 // Function Decleration
 function subtractOne(n) {
-  return Number(n--);
+  return Number( n-- );
 }
 // Function Expression
 let subtractOne = function(n) {
-  return Number(n--);
+  return Number( n-- );
 }
 // Arrow function without curly braces.
-let subtractOne = n => Number(n--);
+let subtractOne = n => Number( n-- );
 
 // Arrow function with curly braces.
 let subtractOne = (n) => {
- return Number(n--);
+ return Number( n-- );
 }
 subtractOne(8); // 7
 
@@ -99,11 +99,11 @@ subtractOne(8); // 7
    return Number( x + y );
  }
  // Arrow function without curly braces.
- let add = (x, y) => Number(x + y);
+ let add = (x, y) => Number( x + y );
 
 // Arrow function with curly braces.
 let add = (x, y) => {
-  return Number(x + y);
+  return Number( x + y );
 }
 add(8, 5); // 13
 
@@ -116,18 +116,18 @@ add(8, 5); // 13
 
 // Function Decleration
 function difference(x, y) {
-  return Number(y - x);
+  return Number( y - x );
 }
 // Function Expression
 let difference = function(x, y) {
-  return Number(y - x);
+  return Number( y - x );
 }
 // Arrow function without curly braces.
-let difference = (x, y) => Number(y - x);
+let difference = (x, y) => Number( y - x );
 
 // Arrow function with curly braces.
 let difference = (x, y) => {
- return Number(y - x);
+ return Number( y - x );
 }
 difference(9, 7); // 2
 
@@ -140,18 +140,18 @@ difference(9, 7); // 2
 
 // Function Decleration
 function multiply(x, y) {
-  return Number(x * y);
+  return Number( x * y );
 }
 // Function Expression
 let multiply = function(x, y) {
-  return Number(x * y);
+  return Number( x * y );
 }
 // Arrow function without curly braces.
-let multiply = (x, y) => Number(x * y);
+let multiply = (x, y) => Number( x * y );
 
 // Arrow function with curly braces.
 let multiply = (x, y) => {
- return Number(x * y);
+ return Number( x * y );
 }
 multiply(8, 4); // 32
 
@@ -164,18 +164,18 @@ multiply(8, 4); // 32
 
 // Function Decleration
 function division(x, y) {
-  return Number(x / y);
+  return Number( x / y );
 }
 // Function Expression
 let division = function(x, y) {
-  return Number(x / y);
+  return Number( x / y );
 }
 // Arrow function without curly braces.
-let division = (x, y) => Number(x / y);
+let division = (x, y) => Number( x / y );
 
 // Arrow function with curly braces.
 let division = (x, y) => {
- return Number(x / y);
+ return Number( x / y );
 }
 divide(8, 4); // 2
 
@@ -211,23 +211,22 @@ square(8); // 64
  * @return {number} the result
  */
 
-// Function Decleration
-function operation(add, x, y) {
-  var output = Number(x + y);
-  return console.log(`${x} + ${y} = ${output}`);
-}
-// Function Expression
-let addOne = function(subtract, x, y) {
-  var output = Number(x - y);
-  return console.log(`${x} - ${y} = ${output}`);
-}
-// Arrow function without curly braces.
-let addOne = (multiply, x, y) => console.log("x * y = " + (x * y));
-
-// Arrow function with curly braces.
-let addOne = (divide, x, y) => {
-  var output = Number(x / y);
-  return console.log(`${x} / ${y} = ${output}`);
+// Arrow function
+let operation = (operation, x, y) => {
+	switch (operation) {
+		case "add":
+			console.log(`${x} + ${y} = ${x + y}`);
+			break;
+		case "subtract":
+			console.log(`${x} - ${y} = ${x - y}`);
+			break;
+		case "multiply":
+			console.log(`${x} * ${y} = ${x * y}`);
+			break;
+		case "divide":
+			console.log(`${x} / ${y} = ${x / y}`);
+			break;
+	}				
 }
 
 /**

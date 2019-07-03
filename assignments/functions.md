@@ -36,13 +36,11 @@ function calculateSupply(age, amount) {
 ```js
 // your code goes here
 function celsiusToFahrenheit(celsius) {
-  let celsius;
   let fahrenheit = celsius * 1.8 + 32;
   return `${celsius}C is ${fahrenheit}F`;
 }
 
 function fahrenheitToCelsius(fahrenheit) {
-  let fahrenheit;
   let celsius = (fahrenheit - 32) / 1.8;
   return `${fahrenheit}C is ${celsius}F`;
 }
@@ -99,9 +97,13 @@ Is there any difference in the behavior of these two variants? If there is what 
 // Your code goes here
 function pow(x, n) {
   var x = +prompt("Enter a number");
+
   var n = +prompt("Enter the power");
+
   if (n > 0) {
     alert(x ** n);
+  } else if (n < 0) {
+    alert("The number below 1 is not allowed.");
   }
 }
 // After writing code uncomment to check the answer.
@@ -115,18 +117,26 @@ pow(-31, 2); // "The number below 1 is not allowed"
 
 ```js
 // your code goes here
-function chooseOperation() {
-  var num = +prompt("Enter a number!");
-  var operator = prompt("Tell operator: sum or product");
-  if (operator == "sum") {
-    return n(n+1)/2;
-  } else if(product == 0) {
-      return 1;
-   }
-   return x * fact(x-1);
-}
+function factorial(n) {
+    let input = 1;
+    for (var i = 1; i <= n; i++) {
+      input *= i;
+    }
+
+    return input;
   }
-}
+
+  function chooseOperation() {
+    let num = prompt('Enter a number.');
+
+    let operator = prompt('Enter one of following operator: sum or product');
+
+    if (operator == "sum") {
+      return num * (num + 1) / 2;
+    } else if (operator == "product") {
+      return factorial(num);
+    }
+  }
 ```
 6. 🎖Write a program that asks the user for a number n using prompt and prints the sum of the numbers 1 to n
 
