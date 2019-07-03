@@ -109,11 +109,24 @@ pow(3, 2); // 9
 pow(3, 3); // 27
 pow(1, 100); // 1
 pow(-31, 2); // "The number below 1 is not allowed"
+```
 
 6. 🎖Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n. Return the result accordingly.
 
 ```js
 // your code goes here
+function chooseOperation() {
+  var num = +prompt("Enter a number!");
+  var operator = prompt("Tell operator: sum or product");
+  if (operator == "sum") {
+    return n(n+1)/2;
+  } else if(product == 0) {
+      return 1;
+   }
+   return x * fact(x-1);
+}
+  }
+}
 ```
 6. 🎖Write a program that asks the user for a number n using prompt and prints the sum of the numbers 1 to n
 
